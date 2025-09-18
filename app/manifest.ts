@@ -2,13 +2,14 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "long sitename",
-    short_name: "sitename",
-    description: "sitename description",
+    name: "Plourg",
+    short_name: "Plourg",
+    description:
+      "Plourg is a campus‑focused marketplace to buy, sell, and connect with trusted local vendors.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fff",
-    theme_color: "#fff",
+    background_color: "#ffffff",
+    theme_color: "#ff2bb8",
     icons: [
       {
         src: "/favicon.ico",

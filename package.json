@@ -1,7 +1,9 @@
 {
-  "name": "next-temp",
+  "name": "plourg",
   "version": "0.1.0",
   "private": true,
+  "description": "Plourg — a campus marketplace to buy, sell, and connect with trusted local vendors.",
+  "homepage": "https://plourg.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -27,18 +27,26 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nextapptemplate.xyz"),
+  metadataBase: new URL("https://plourg.com"),
   icons: {
-    icon: "/icon.png",
+    icon: "/favicon.ico",
   },
-  title: "nextjs template",
+  title: "Plourg — Sell, Connect, Earn on Campus",
   description:
-    "I fell in love with next.js, im trying to make a template for it also",
-  applicationName: "next Web Application",
-  authors: [{ name: "nextapp template", url: "https://domainname.host" }],
-  keywords: ["NextJs", "reactjs", "template", "typescript"],
-  creator: "VickyJay",
-  publisher: "VickyJay",
+    "Plourg is a campus‑focused marketplace to buy, sell, and connect with trusted local vendors. Join our waitlist to get early access.",
+  applicationName: "Plourg",
+  authors: [{ name: "Plourg" }],
+  keywords: [
+    "Plourg",
+    "campus marketplace",
+    "buy and sell",
+    "connect",
+    "students",
+    "vendors",
+    "waitlist",
+  ],
+  creator: "Plourg",
+  publisher: "Plourg",
   generator: "Next.js",
   referrer: "origin",
   robots: {
@@ -47,41 +55,40 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://domainname.host",
-    title: "Nextjs template",
-    siteName: "nextapp template",
+    url: "https://plourg.com",
+    title: "Plourg — Sell, Connect, Earn on Campus",
+    siteName: "Plourg",
     locale: "en_US",
     images: [
       {
-        url: "linktoopengraphimage.cdn",
+        url: "/images/Vector 1.png",
         width: 1200,
         height: 630,
-        alt: "next OG Image",
+        alt: "Plourg preview",
       },
     ],
   },
   twitter: {
-    site: "nextapp",
-    creator: "socialmediahandle",
-    title:
-      "nextapp template - I fell in love with next.js, im trying to make a template for it tooo",
+    site: "@plourg",
+    creator: "@plourg",
+    title: "Plourg — Sell, Connect, Earn on Campus",
     description:
-      "I fell in love with next.js, im trying to make a template for it too",
+      "Buy, sell, and connect with local vendors around campus. Join the waitlist.",
     card: "summary_large_image",
-    images: ["linktoopengraph.com"],
+    images: ["/images/Vector 1.png"],
   },
   appleWebApp: {
     capable: true,
-    title: "nextapp template",
+    title: "Plourg",
     statusBarStyle: "black-translucent",
   },
   formatDetection: {
     telephone: false,
   },
   abstract:
-    "I fell in love with next.js, im trying to make a template for it tooo",
-  category: "Social",
-  classification: "Social",
+    "A platform that makes it easy to buy, sell, or find anything you need on and around campus — fast, simple, and stress‑free.",
+  category: "Marketplace",
+  classification: "Marketplace",
 };
 
 export default function RootLayout({

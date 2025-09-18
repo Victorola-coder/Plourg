@@ -264,8 +264,8 @@ export default function Home() {
               <Card>
                 <div className="bg-[#283142] p-4 rounded-lg">
                   <Image
-                    src="/images/logo.svg"
-                    alt="Placeholder"
+                    src="/images/Vector 1.png"
+                    alt="Plourg Illustration"
                     width={300}
                     height={200}
                     className="rounded-lg"

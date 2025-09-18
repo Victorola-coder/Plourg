@@ -1,4 +1,3 @@
-export { default as Otp } from "./otp";
 export { default as Tabs } from "./tabs";
 export { default as Card } from "./card";
 export { default as Input } from "./input";

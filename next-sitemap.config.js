@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 
 module.exports = {
-  siteUrl: "https://sitename.com",
+  siteUrl: "https://plourg.com",
   changefreq: "weekly",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
