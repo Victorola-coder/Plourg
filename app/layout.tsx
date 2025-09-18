@@ -46,7 +46,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://plourg.com"),
   icons: {
-    icon: "/images/favcon.png",
+    icon: "/images/favicon.png",
   },
   title: "Plourg — Sell, Connect, Earn on Campus",
   description:
