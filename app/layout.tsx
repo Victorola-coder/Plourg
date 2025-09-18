@@ -19,13 +19,43 @@ const geistMono = localFont({
 const franklinGothic = localFont({
   src: [
     {
-      path: "./fonts/franklin-gothic/FranklinGothic.ttf",
+      path: "./fonts/ITC Franklin Gothic Std/ITC Franklin Gothic Std Book/ITC Franklin Gothic Std Book.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/franklin-gothic/FranklinGothicITALIC.ttf",
+      path: "./fonts/ITC Franklin Gothic Std/ITC Franklin Gothic Std Book Italic/ITC Franklin Gothic Std Book Italic.otf",
       weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./fonts/ITC Franklin Gothic Std/ITC Franklin Gothic Std Medium/ITC Franklin Gothic Std Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/ITC Franklin Gothic Std/ITC Franklin Gothic Std Medium Italic/ITC Franklin Gothic Std Medium Italic.otf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "./fonts/ITC Franklin Gothic Std/ITC Franklin Gothic Std Demi/ITC Franklin Gothic Std Demi.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/ITC Franklin Gothic Std/ITC Franklin Gothic Std Demi Italic/ITC Franklin Gothic Std Demi Italic.otf",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "./fonts/ITC Franklin Gothic Std/ITC Franklin Gothic Std Heavy/ITC Franklin Gothic Std Heavy.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/ITC Franklin Gothic Std/ITC Franklin Gothic Std Heavy Italic/ITC Franklin Gothic Std Heavy Italic.otf",
+      weight: "700",
       style: "italic",
     },
   ],

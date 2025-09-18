@@ -79,6 +79,22 @@ const config: Config = {
           DEFAULT: "#E1DEF0",
           100: "#F3EFFD",
         },
+        // Brand additions
+        brand: {
+          pink: "#FB41DC",
+          green: "#00BA59",
+        },
+        surface: {
+          DEFAULT: "#F8F8F8",
+          white: "#FFFFFF",
+        },
+        border: {
+          DEFAULT: "#E5E5E5",
+        },
+        ink: {
+          DEFAULT: "#000000",
+          muted: "#A3A3A3",
+        },
       },
     },
   },
