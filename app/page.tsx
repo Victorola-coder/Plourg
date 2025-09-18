@@ -4,6 +4,7 @@ import {
   Features,
   CTAWaitlist,
   HowItWorks,
+  WaitlistSection,
 } from "./components/organisms";
 import { Header, Footer } from "./components/atoms";
 
@@ -12,6 +13,7 @@ export default function Page() {
     <main>
       <Header />
       <Hero />
+      <WaitlistSection />
       <Features />
       <HowItWorks />
       <CTAWaitlist />
