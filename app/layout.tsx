@@ -16,6 +16,23 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const franklinGothic = localFont({
+  src: [
+    {
+      path: "./fonts/franklin-gothic/FranklinGothic.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/franklin-gothic/FranklinGothicITALIC.ttf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  variable: "--font-franklin",
+  display: "swap",
+});
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
@@ -29,7 +46,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://plourg.com"),
   icons: {
-    icon: "/favicon.ico",
+    icon: "/images/favcon.png",
   },
   title: "Plourg — Sell, Connect, Earn on Campus",
   description:
@@ -99,7 +116,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${montserrat.className} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${montserrat.className} ${geistMono.variable} ${franklinGothic.variable} antialiased`}
       >
         <Toaster richColors />
         <AOS />

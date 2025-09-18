@@ -10,9 +10,9 @@
 }
 
 body {
-  color: white;
-  background-color: #0f0f0f;
+  color: #000000;
   overflow-x: hidden;
+  background-color: white;
 }
 
 body::-webkit-scrollbar {
@@ -69,6 +69,3 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
-
-
