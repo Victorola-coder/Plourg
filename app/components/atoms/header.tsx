@@ -8,7 +8,7 @@ export default function Header() {
       </figure>
       <button
         type="button"
-        className="bg-[#00BA59] text-white font-medium font-franklin px-[21px] py-[10px] rounded-[99px]"
+        className="bg-[#00BA59] text-[#000000] font-medium font-franklin px-[21px] py-[10px] rounded-[99px]"
       >
         Join waitlist
       </button>
