@@ -13,6 +13,9 @@ const config: Config = {
         geistSans: ["var(--font-geist-sans)"],
         franklin: ["var(--font-franklin)"],
       },
+      fontSize: {
+        hero: ["175.2px", { lineHeight: "100%", letterSpacing: "-3%" }],
+      },
       keyframes: {
         "fade-effect": {
           "0%": {

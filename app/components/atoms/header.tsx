@@ -8,9 +8,9 @@ export default function Header() {
       </figure>
       <button
         type="button"
-        className="bg-[#00BA59] text-[#000000] font-medium font-franklin px-[21px] py-[10px] rounded-[99px]"
+        className="bg-[#00BA59] text-[#FFFFFF] font-medium font-franklin px-[24px] py-[10px] rounded-[99px]"
       >
-        Join waitlist
+        Join our waitlist
       </button>
     </nav>
   );

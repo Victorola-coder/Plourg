@@ -49,6 +49,11 @@ const franklinGothic = localFont({
       style: "italic",
     },
     {
+      path: "./fonts/ITC Franklin Gothic Std/ITC Franklin Gothic Std Demi Compressed/ITC Franklin Gothic Std Demi Compressed.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
       path: "./fonts/ITC Franklin Gothic Std/ITC Franklin Gothic Std Heavy/ITC Franklin Gothic Std Heavy.otf",
       weight: "700",
       style: "normal",
