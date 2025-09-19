@@ -2,18 +2,18 @@ import WaitlistForm from "../molecules/waitlist-form";
 
 export default function WaitlistSection() {
   return (
-    <section className="mx-[20px] md:mx-[48px] my-[64px]">
-      <div className="bg-black rounded-[24px] p-8 md:p-12 mb-8">
-        <h2 className="text-white font-franklin text-[32px] md:text-[48px] font-semibold leading-tight mb-4">
+    <section className="mx-[20px] md:mx-[48px] my-[64px] flex flex-col justify-center items-center">
+      <div>
+        <h3 className="font-franklin font-semibold text-h2 text-center">
+          Plourg is almost here!
+        </h3>
+        <p className="text-franklin text-[16px] md:text-[18px]">
           A platform that makes it easy to buy, sell, or find anything you need
-          on and around campus—fast, simple, and stress-free.
-        </h2>
-        <p className="text-white font-franklin text-[20px] md:text-[24px]">
-          Don't be left out.
+          on and around campus—fast, simple, and stress-free. Don’t be left out.
         </p>
       </div>
 
-      <WaitlistForm />
+      {/* <WaitlistForm /> */}
     </section>
   );
 }

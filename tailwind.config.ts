@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontSize: {
         hero: ["175.2px", { lineHeight: "100%", letterSpacing: "-3%" }],
+        h2: ["32px", { lineHeight: "90%", letterSpacing: "-3%" }],
       },
       keyframes: {
         "fade-effect": {
