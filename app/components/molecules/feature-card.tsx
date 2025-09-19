@@ -1,8 +1,8 @@
 type FeatureCardProps = {
   title: string;
+  className?: string;
   description: string;
   icon?: React.ReactNode;
-  className?: string;
 };
 
 export default function FeatureCard({

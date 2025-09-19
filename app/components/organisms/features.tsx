@@ -1,8 +1,15 @@
-import FeatureCard from "../molecules/feature-card";
+import { FeatureCard } from "../molecules";
 
 export default function Features() {
   return (
-    <section className="mx-[20px] md:mx-[48px] my-[64px]">
+    <section className="">
+      <div>
+        <h3 className="font-semibold text-h2">Why Join Early</h3>
+        <p className="max-w-[397px]_  font-normal text-[16px] leading-[120%] tracking-[-2%] text-ink-muted">
+          The platform designed specifically for local vendors like you
+        </p>
+      </div>
+
       <div className="grid md:grid-cols-3 gap-4">
         <FeatureCard
           title="Early Access"
@@ -21,5 +28,3 @@ export default function Features() {
     </section>
   );
 }
-
-
