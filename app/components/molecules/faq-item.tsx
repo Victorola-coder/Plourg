@@ -5,11 +5,13 @@ type FAQItemProps = {
 
 export default function FAQItem({ question, answer }: FAQItemProps) {
   return (
-    <details className="bg-white border border-[#E5E5E5] rounded-[12px] p-4">
-      <summary className="cursor-pointer font-franklin text-base text-[#000000]">
+    <div className="border-b border-[#D1D1D1] py-4">
+      <h3 className="font-franklin font-semibold text-[16px] leading-[120%] tracking-[-2%] text-ink mb-2">
         {question}
-      </summary>
-      <p className="pt-2 text-[#A3A3A3] text-sm leading-relaxed">{answer}</p>
-    </details>
+      </h3>
+      <p className="max-w-[718px] font-franklin font-normal text-[16px] leading-[120%] tracking-[-2%] text-ink-muted">
+        {answer}
+      </p>
+    </div>
   );
 }
