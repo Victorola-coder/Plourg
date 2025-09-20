@@ -1,8 +1,17 @@
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+
 export default function Features() {
   return (
-    <section
+    <motion.section
       className="mx-[20px] md:mx-[48px] lg:px-[308px] min-h-[300px] md:min-h-[400px] bg-cover bg-center bg-no-repeat rounded-[16px] md:rounded-[24px]"
       style={{ backgroundImage: "url('/images/feat.png')" }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-100px" }}
     >
       <div>
         <div className="p-4 md:p-8 lg:p-12">
@@ -16,7 +25,13 @@ export default function Features() {
           </div>
         </div>
 
-        <div className="bg-[#F7F7F7] rounded-[16px] md:rounded-[24px] p-4 md:pl-[42px] md:pr-[77.7px] md:pt-[61px] md:pb-[70.63px] flex flex-col md:flex-row items-center md:items-end justify-between gap-4 md:gap-0">
+        <motion.div
+          className="bg-[#F7F7F7] rounded-[16px] md:rounded-[24px] p-4 md:pl-[42px] md:pr-[77.7px] md:pt-[61px] md:pb-[70.63px] flex flex-col md:flex-row items-center md:items-end justify-between gap-4 md:gap-0"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <div>
             <h3 className="font-franklin font-semibold text-[18px] md:text-[24px] leading-[120%] tracking-[-3%] text-ink mb-1">
               Early Access
@@ -25,15 +40,20 @@ export default function Features() {
               Be the first to try Plourg before public launch.
             </p>
           </div>
-          <figure>
+          <motion.figure
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <img
               src="/images/light.png"
               draggable={false}
               alt="Early Access"
               className="w-[60px] md:w-auto"
             />
-          </figure>
-        </div>
+          </motion.figure>
+        </motion.div>
         <div className="mt-[16px] md:mt-[32px] flex flex-col md:flex-row items-center gap-[16px] md:gap-[24px] justify-center">
           <div className="bg-[#F7F7F7] rounded-[16px] md:rounded-[24px] flex flex-col gap-[20px] md:gap-[41.67px] p-4 md:px-[42px] md:pt-[30px] md:pb-[111px]">
             <figure className="self-end">
@@ -150,6 +170,6 @@ export default function Features() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function WaitlistForm() {
   const [formData, setFormData] = useState({
@@ -121,12 +122,15 @@ export default function WaitlistForm() {
         />
       </div>
 
-      <button
+      <motion.button
         type="button"
-        className=" block mx-auto bg-[#00BA59] text-[#FFFFFF] font-medium font-franklin px-[24px] py-[10px] rounded-[99px]"
+        className="block mx-auto bg-[#00BA59] text-[#FFFFFF] font-medium font-franklin px-[24px] py-[10px] rounded-[99px] hover:bg-[#00A550] transition-colors duration-300"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
       >
         Join our waitlist
-      </button>
+      </motion.button>
     </form>
   );
 }

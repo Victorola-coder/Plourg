@@ -1,3 +1,7 @@
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
 import FAQItem from "../molecules/faq-item";
 
 const faqs = [
@@ -33,18 +37,50 @@ const faqs = [
 
 export default function FAQs() {
   return (
-    <section className="justify-center flex flex-col mx-[20px] md:mx-[48px] lg:mx-[308px]">
-      <h2 className="text-[#000000] font-semibold font-franklin text-[24px] md:text-[28px] lg:text-[32px]">
+    <motion.section
+      className="justify-center flex flex-col mx-[20px] md:mx-[48px] lg:mx-[308px]"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-100px" }}
+    >
+      <motion.h2
+        className="text-[#000000] font-semibold font-franklin text-[24px] md:text-[28px] lg:text-[32px]"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         FAQs
-      </h2>
-      <p className="text-[#A3A3A3] text-[14px] md:text-[16px]">
+      </motion.h2>
+      <motion.p
+        className="text-[#A3A3A3] text-[14px] md:text-[16px]"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         Common questions from shoppers like you
-      </p>
-      <div className="grid gap-3 p-[20px] md:p-[40px] rounded-[16px] md:rounded-[24px] bg-[#F7F7F7] border-b border-[#E5E5E5] mt-[16px] md:mt-[32px]">
-        {faqs.map((f) => (
-          <FAQItem key={f.q} question={f.q} answer={f.a} />
+      </motion.p>
+      <motion.div
+        className="grid gap-3 p-[20px] md:p-[40px] rounded-[16px] md:rounded-[24px] bg-[#F7F7F7] border-b border-[#E5E5E5] mt-[16px] md:mt-[32px]"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        {faqs.map((f, index) => (
+          <motion.div
+            key={f.q}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <FAQItem question={f.q} answer={f.a} />
+          </motion.div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

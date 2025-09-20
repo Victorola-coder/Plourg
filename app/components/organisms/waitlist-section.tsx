@@ -1,9 +1,25 @@
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
 import WaitlistForm from "../molecules/waitlist-form";
 
 export default function WaitlistSection() {
   return (
-    <section className="mx-[20px] md:mx-[48px] my-[32px] md:my-[64px] flex flex-col justify-center items-center">
-      <div className="flex flex-col justify-center items-center gap-[12px] md:gap-[16px]">
+    <motion.section
+      className="mx-[20px] md:mx-[48px] my-[32px] md:my-[64px] flex flex-col justify-center items-center"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-100px" }}
+    >
+      <motion.div
+        className="flex flex-col justify-center items-center gap-[12px] md:gap-[16px]"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <h3 className="font-franklin font-semibold text-[24px] md:text-h2 text-center">
           Plourg is almost here!
         </h3>
@@ -15,9 +31,16 @@ export default function WaitlistSection() {
             Don't be left out.
           </span>
         </p>
-      </div>
+      </motion.div>
 
-      <WaitlistForm />
-    </section>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <WaitlistForm />
+      </motion.div>
+    </motion.section>
   );
 }
