@@ -4,10 +4,10 @@ import { useState } from "react";
 
 export default function WaitlistForm() {
   const [formData, setFormData] = useState({
-    name: "Name.inc",
-    phone: "09013456723",
-    location: "Ketu, Lagos",
-    university: "Ketu, Lagos",
+    name: "",
+    phone: "",
+    location: "",
+    university: "",
     feedback: "",
   });
 

@@ -3,7 +3,7 @@ import { InstagramIcon, TwitterIcon } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-[#FB41DC] m-[48px] rounded-[24px] py-[95px] px-[73px] flex flex-row items-center gap-[220px]">
-      <h2 className="text-[128px] tracking-[-0.03em] font-semibold leading-normal font-franklin text-[#FFFFFF]">
+      <h2 className="font-franklin font-semibold text-[128px] leading-[100%] tracking-[-3%] text-white">
         Connect with us today.
       </h2>
       <div className="flex flex-col gap-[103px]">
