@@ -33,12 +33,14 @@ const faqs = [
 
 export default function FAQs() {
   return (
-    <section className="justify-center flex flex-col mx-[308px]">
-      <h2 className="text-[#000000] font-semibold font-franklin text-[28px] md:text-[32px]">
+    <section className="justify-center flex flex-col mx-[20px] md:mx-[48px] lg:mx-[308px]">
+      <h2 className="text-[#000000] font-semibold font-franklin text-[24px] md:text-[28px] lg:text-[32px]">
         FAQs
       </h2>
-      <p className="text-[#A3A3A3]">Common questions from shoppers like you</p>
-      <div className="grid gap-3 p-[40px] rounded-[24px] bg-[#F7F7F7] border-b border-[#E5E5E5] mt-[32px]">
+      <p className="text-[#A3A3A3] text-[14px] md:text-[16px]">
+        Common questions from shoppers like you
+      </p>
+      <div className="grid gap-3 p-[20px] md:p-[40px] rounded-[16px] md:rounded-[24px] bg-[#F7F7F7] border-b border-[#E5E5E5] mt-[16px] md:mt-[32px]">
         {faqs.map((f) => (
           <FAQItem key={f.q} question={f.q} answer={f.a} />
         ))}

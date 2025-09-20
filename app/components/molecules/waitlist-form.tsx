@@ -30,7 +30,7 @@ export default function WaitlistForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-[#F7F7F7] w-full mt-[44px] rounded-[24px] p-8 space-y-6"
+      className="bg-[#F7F7F7] w-full mt-[24px] md:mt-[44px] rounded-[16px] md:rounded-[24px] p-4 md:p-8 space-y-4 md:space-y-6"
     >
       <fieldset className="flex flex-col gap-[16px]">
         <label
