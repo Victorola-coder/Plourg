@@ -25,8 +25,8 @@ const faqs = [
 
 export default function FAQs() {
   return (
-    <section className="mx-[20px] md:mx-[48px] my-[64px]">
-      <h2 className="text-[#000000] font-franklin text-[28px] md:text-[36px] mb-6">
+    <section className="mx-auto justify-center flex flex-col md:mx-[48px] my-[64px]">
+      <h2 className="text-[#000000] font-semibold font-franklin text-[28px] md:text-[32spx] mb-6">
         FAQs
       </h2>
       <div className="grid gap-3">
