@@ -3,7 +3,6 @@ import {
   FAQs,
   Features,
   CTAWaitlist,
-  HowItWorks,
   WaitlistSection,
 } from "./components/organisms";
 import { Header, Footer } from "./components/atoms";
@@ -15,7 +14,6 @@ export default function Page() {
       <Hero />
       <WaitlistSection />
       <Features />
-      <HowItWorks />
       <CTAWaitlist />
       <FAQs />
       <Footer />
