@@ -38,6 +38,7 @@ export default function WaitlistSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         viewport={{ once: true }}
+        className="w-full md:w-[70%]"
       >
         <WaitlistForm />
       </motion.div>
