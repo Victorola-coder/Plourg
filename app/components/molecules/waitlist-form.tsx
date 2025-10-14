@@ -1,5 +1,6 @@
 "use client";
 
+import { toast } from "sonner";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -12,10 +13,6 @@ export default function WaitlistForm() {
     feedback: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
-  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -30,8 +27,6 @@ export default function WaitlistForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus("idle");
-    setErrorMessage("");
 
     try {
       const response = await fetch("/api/waitlist", {
@@ -45,7 +40,10 @@ export default function WaitlistForm() {
       const data = await response.json();
 
       if (response.ok) {
-        setSubmitStatus("success");
+        toast.success("🎉 Successfully joined our waitlist!", {
+          description: "We'll notify you when we launch our platform.",
+          duration: 5000,
+        });
         setFormData({
           name: "",
           phone: "",
@@ -54,16 +52,16 @@ export default function WaitlistForm() {
           feedback: "",
         });
       } else {
-        setSubmitStatus("error");
-        setErrorMessage(
-          data.error || "Something went wrong. Please try again."
-        );
+        toast.error("❌ Failed to join waitlist", {
+          description: data.error || "Something went wrong. Please try again.",
+          duration: 5000,
+        });
       }
     } catch (error) {
-      setSubmitStatus("error");
-      setErrorMessage(
-        "Network error. Please check your connection and try again."
-      );
+      toast.error("❌ Network Error", {
+        description: "Please check your connection and try again.",
+        duration: 5000,
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -162,19 +160,6 @@ export default function WaitlistForm() {
           className="w-full bg-white rounded-full px-4 py-3 text-[#000000] border-0 focus:outline-none transition-all duration-300 focus:ring-2 focus:ring-[#00BA59] resize-none"
         />
       </div>
-
-      {/* Status Messages */}
-      {submitStatus === "success" && (
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-md">
-          🎉 Successfully joined our waitlist! We'll notify you when we launch.
-        </div>
-      )}
-
-      {submitStatus === "error" && (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-md">
-          ❌ {errorMessage}
-        </div>
-      )}
 
       <motion.button
         type="submit"
