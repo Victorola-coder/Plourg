@@ -8,14 +8,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "db:seed": "node scripts/seed.js"
   },
   "dependencies": {
     "@prisma/client": "^6.17.1",
     "@supabase/supabase-js": "^2.75.0",
     "@types/nodemailer": "^7.0.2",
     "aos": "^2.3.4",
-    "axios": "^1.7.9",
     "clsx": "^2.1.1",
     "csv-writer": "^1.6.0",
     "framer-motion": "^11.11.9",

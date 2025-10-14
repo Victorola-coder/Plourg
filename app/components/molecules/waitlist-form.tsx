@@ -11,6 +11,11 @@ export default function WaitlistForm() {
     university: "",
     feedback: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -22,10 +27,46 @@ export default function WaitlistForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({
+          name: "",
+          phone: "",
+          location: "",
+          university: "",
+          feedback: "",
+        });
+      } else {
+        setSubmitStatus("error");
+        setErrorMessage(
+          data.error || "Something went wrong. Please try again."
+        );
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+      setErrorMessage(
+        "Network error. Please check your connection and try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -122,14 +163,32 @@ export default function WaitlistForm() {
         />
       </div>
 
+      {/* Status Messages */}
+      {submitStatus === "success" && (
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-md">
+          🎉 Successfully joined our waitlist! We'll notify you when we launch.
+        </div>
+      )}
+
+      {submitStatus === "error" && (
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-md">
+          ❌ {errorMessage}
+        </div>
+      )}
+
       <motion.button
-        type="button"
-        className="block mx-auto bg-[#00BA59] text-[#FFFFFF] font-medium font-franklin px-[24px] py-[10px] rounded-[99px] hover:bg-[#00A550] transition-colors duration-300"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        type="submit"
+        disabled={isSubmitting}
+        className={`block mx-auto font-medium font-franklin px-[24px] py-[10px] rounded-[99px] transition-colors duration-300 ${
+          isSubmitting
+            ? "bg-gray-400 text-gray-200 cursor-not-allowed"
+            : "bg-[#00BA59] text-[#FFFFFF] hover:bg-[#00A550]"
+        }`}
+        whileHover={!isSubmitting ? { scale: 1.05 } : {}}
+        whileTap={!isSubmitting ? { scale: 0.95 } : {}}
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
       >
-        Join our waitlist
+        {isSubmitting ? "Joining..." : "Join our waitlist"}
       </motion.button>
     </form>
   );
